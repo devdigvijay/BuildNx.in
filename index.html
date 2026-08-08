@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildNX — We build systems that move businesses forward</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        glassBase: '#050508',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 3D Perspective & Depth */
+        .perspective-container {
+            perspective: 1200px;
+        }
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        .translate-z-30 {
+            transform: translateZ(30px);
+        }
+        .translate-z-50 {
+            transform: translateZ(50px);
+        }
+        
+        /* Advanced Glassmorphism Styling */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 
+                0 8px 32px 0 rgba(0, 0, 0, 0.37),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-input {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .glass-input:focus-within {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+        }
+
+        /* Subtle ambient grid */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-glassBase text-slate-100 min-h-screen flex flex-col justify-between selection:bg-sky-500 selection:text-white bg-grid overflow-x-hidden relative">
+
+    <!-- Ambient Floating Orbs for Glass Refraction -->
+    <div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/15 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/3 right-1/4 translate-x-1/3 w-[450px] h-[450px] bg-indigo-600/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <!-- Header -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-8 flex justify-between items-center z-10">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/20 border border-white/20">
+                B
+            </div>
+            <span class="font-semibold tracking-wider text-lg">BuildNX</span>
+        </div>
+        <div class="text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full glass-panel text-sky-400 font-mono">
+            System Initializing
+        </div>
+    </header>
+
+    <!-- Main Content Hero -->
+    <main class="w-full max-w-6xl mx-auto px-6 py-12 z-10 flex flex-col items-center text-center">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-panel text-sky-400 text-xs font-mono mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+            <span>Coming Soon</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl leading-[1.1] mb-6">
+            We build systems that <span class="bg-gradient-to-r from-sky-400 via-indigo-300 to-white bg-clip-text text-transparent">move businesses forward</span>.
+        </h1>
+
+        <p class="text-slate-400 text-base md:text-lg max-w-xl mb-12 font-light">
+            High-performance systems architecture, automated deployment workflows, and ultra-reliable cloud primitives designed for scale.
+        </p>
+
+        <!-- 3D Glassmorphic Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-16 perspective-container">
+            
+            <!-- Card 1: Software Development -->
+            <div class="tilt-card group relative glass-panel rounded-2xl p-6 text-left transition-all duration-300 hover:border-sky-500/30 hover:shadow-sky-500/10 preserve-3d">
+                <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-4 translate-z-30">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-200 translate-z-50">SOFTWARE DEVELOPMENT</h3>
+                <p class="text-slate-400 text-sm leading-relaxed translate-z-30 font-light">
+                    Robust, scalable backend systems and applications engineered with high-performance paradigms and clean architecture.
+                </p>
+            </div>
+
+            <!-- Card 2: Cloud Engineering -->
+            <div class="tilt-card group relative glass-panel rounded-2xl p-6 text-left transition-all duration-300 hover:border-sky-500/30 hover:shadow-sky-500/10 preserve-3d">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 translate-z-30">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h10a5 5 0 00-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-200 translate-z-50">CLOUD ENGINEERING</h3>
+                <p class="text-slate-400 text-sm leading-relaxed translate-z-30 font-light">
+                    Resilient cloud infrastructure designed for extreme uptime, distributed availability, and zero-downtime scalability.
+                </p>
+            </div>
+
+            <!-- Card 3: DevOps -->
+            <div class="tilt-card group relative glass-panel rounded-2xl p-6 text-left transition-all duration-300 hover:border-sky-500/30 hover:shadow-sky-500/10 preserve-3d">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 translate-z-30">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-200 translate-z-50">DEVOPS</h3>
+                <p class="text-slate-400 text-sm leading-relaxed translate-z-30 font-light">
+                    Streamlined CI/CD pipelines, automated container orchestration, and continuous infrastructure monitoring systems.
+                </p>
+            </div>
+
+            <!-- Card 4: AI & Automation -->
+            <div class="tilt-card group relative glass-panel rounded-2xl p-6 text-left transition-all duration-300 hover:border-sky-500/30 hover:shadow-sky-500/10 preserve-3d">
+                <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4 translate-z-30">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-200 translate-z-50">AI & AUTOMATION</h3>
+                <p class="text-slate-400 text-sm leading-relaxed translate-z-30 font-light">
+                    Intelligent workflows, MLOps infrastructure, and algorithmic pipelines built to optimize complex business logic.
+                </p>
+            </div>
+
+            <!-- Card 5: Industrial Automation -->
+            <div class="tilt-card group relative glass-panel rounded-2xl p-6 text-left transition-all duration-300 hover:border-sky-500/30 hover:shadow-sky-500/10 preserve-3d lg:col-span-2">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-4 translate-z-30">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-200 translate-z-50">INDUSTRIAL AUTOMATION</h3>
+                <p class="text-slate-400 text-sm leading-relaxed translate-z-30 font-light">
+                    Precision hardware-software integration, automated control workflows, and reliable low-latency operational data systems.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-7xl mx-auto px-6 py-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 font-mono z-10">
+        <div>&copy; 2026 BuildNX Systems. All rights reserved.</div>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-slate-300 transition-colors">Documentation</a>
+            <a href="#" class="hover:text-slate-300 transition-colors">Engineering Blog</a>
+            <a href="#" class="hover:text-slate-300 transition-colors">System Status</a>
+        </div>
+    </footer>
+
+    <!-- 3D Tilt JavaScript Engine -->
+    <script>
+        const cards = document.querySelectorAll('.tilt-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = -((y - centerY) / centerY) * 6;
+                const rotateY = ((x - centerX) / centerX) * 6;
+
+                requestAnimationFrame(() => {
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                requestAnimationFrame(() => {
+                    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                    card.style.transition = 'transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99)';
+                });
+            });
+
+            card.addEventListener('mouseenter', () => {
+                card.style.transition = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
